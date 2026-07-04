@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Portfolio personale in stile macOS — sfondo NASA APOD e progetti." />
   <title>Portfolio — macOS Desktop</title>
-  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="./src/style.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%80%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -15,7 +15,7 @@
       <div class="wallpaper-loader" id="wallpaperLoader">Caricamento sfondo NASA…</div>
     </div>
 
-    <!-- MENU BAR (top, stile macOS) -->
+    <!-- MENU BAR -->
     <header class="menubar" role="banner">
       <div class="menubar-left">
         <span class="apple-logo" aria-hidden="true"></span>
@@ -30,9 +30,8 @@
       </div>
     </header>
 
-    <!-- ICONE PROGETTO SUL DESKTOP -->
+    <!-- ICONE PROGETTO -->
     <main class="desktop-icons" id="desktopIcons" aria-label="Progetti sul desktop">
-      <!-- Le 5 icone verranno generate da JS -->
     </main>
 
     <!-- DOCK IN BASSO -->
@@ -74,7 +73,7 @@
     </nav>
   </div>
 
-  <!-- TEMPLATE FINESTRA PROGETTO -->
+  <!-- TEMPLATE FINESTRA -->
   <template id="windowTemplate">
     <div class="window" role="dialog" aria-modal="false" aria-labelledby="winTitle">
       <div class="window-header" data-drag-handle>
@@ -145,6 +144,6 @@
     </div>
   </div>
 
-  <script src="/src/main.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 </html>

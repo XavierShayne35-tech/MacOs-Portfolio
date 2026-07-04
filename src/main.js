@@ -7,9 +7,9 @@
       title: "Au Jardin",
       desc: "Questo è un sito web progettato per un buisness locale. Si tratta di un bar-gelateria-pasticceria a cui ho creato un sistema di prenotazione tavoli.",
       images: [
-        "../src/assets/projects/p1/1.png",
-        "../src/assets/projects/p1/2.png",
-        "../src/assets/projects/p1/3.png",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -17,9 +17,9 @@
       title: "NOT READY FOR NOW",
       desc: "...",
       images: [
-        "assets/projects/p2/1.png",
-        "assets/projects/p2/2.png",
-        "assets/projects/p2/3.png",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -27,9 +27,9 @@
       title: "NOT READY FOR NOW",
       desc: "...",
       images: [
-        "assets/projects/p3/1.jpg",
-        "assets/projects/p3/2.jpg",
-        "assets/projects/p3/3.jpg",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -37,9 +37,9 @@
       title: "NOT READY FOR NOW",
       desc: "...",
       images: [
-        "assets/projects/p4/1.jpg",
-        "assets/projects/p4/2.jpg",
-        "assets/projects/p4/3.jpg",
+        "",
+        "",
+        "",
       ],
     },
     {
@@ -47,15 +47,15 @@
       title: "NOT READY FOR NOW",
       desc: "...",
       images: [
-        "assets/projects/p5/1.jpg",
-        "assets/projects/p5/2.jpg",
-        "assets/projects/p5/3.jpg",
+        "",
+        "",
+        "",
       ],
     },
   ];
 
-  const NASA_API_KEY = mport.meta.env.VITE_NASA_API_KEY;
-  const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`;
+  const VITE_NASA_API_KEY = mport.meta.env.VITE_NASA_API_KEY;
+  const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${VITE_NASA_API_KEY}`;
 
   const wallpaperEl = document.getElementById("wallpaper");
   const loaderEl = document.getElementById("wallpaperLoader");
@@ -147,7 +147,6 @@
         <span class="icon-label">${p.title}</span>
       `;
       el.addEventListener("click", () => openProjectWindow(p, el));
-      // toggle selezione su click semplice (oltre all'apertura)
       el.addEventListener("contextmenu", (e) => {
         e.preventDefault();
         document.querySelectorAll(".desktop-icon.is-selected")
@@ -220,7 +219,6 @@
       img.src = src;
       img.alt = `Screenshot ${i + 1} di ${project.title}`;
       img.addEventListener("error", () => {
-        // placeholder in caso di immagine mancante
         img.replaceWith(Object.assign(document.createElement("div"), {
           textContent: "Immagine non disponibile",
           style:
