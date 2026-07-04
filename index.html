@@ -1,13 +1,150 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>macos-desktop</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Portfolio personale in stile macOS — sfondo NASA APOD e progetti." />
+  <title>Portfolio — macOS Desktop</title>
+  <link rel="stylesheet" href="../MacOs Desktop/src/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%80%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- SFONDO: NASA Astronomy Picture of the Day -->
+  <div class="desktop" id="desktop">
+    <div class="wallpaper" id="wallpaper" aria-hidden="true">
+      <div class="wallpaper-loader" id="wallpaperLoader">Caricamento sfondo NASA…</div>
+    </div>
+
+    <!-- MENU BAR (top, stile macOS) -->
+    <header class="menubar" role="banner">
+      <div class="menubar-left">
+        <span class="apple-logo" aria-hidden="true"></span>
+        <span class="menubar-app">Portfolio</span>
+        <span class="menubar-item">File</span>
+        <span class="menubar-item">Modifica</span>
+        <span class="menubar-item">Visualizza</span>
+        <span class="menubar-item">Aiuto</span>
+      </div>
+      <div class="menubar-right">
+        <span class="menubar-clock" id="clock">--:--</span>
+      </div>
+    </header>
+
+    <!-- ICONE PROGETTO SUL DESKTOP -->
+    <main class="desktop-icons" id="desktopIcons" aria-label="Progetti sul desktop">
+      <!-- Le 5 icone verranno generate da JS -->
+    </main>
+
+    <!-- DOCK IN BASSO -->
+    <nav class="dock" role="navigation" aria-label="Barra delle applicazioni">
+      <ul class="dock-list">
+        <li>
+          <a class="dock-item" href="https://www.instagram.com/emanu_damato35/" target="_blank" rel="noopener" aria-label="Apri profilo Instagram">
+            <span class="dock-icon dock-icon--instagram" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="100%" height="100%"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".5" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
+            </span>
+            <span class="dock-tooltip">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a class="dock-item" href="https://x.com/PioAmato93520" target="_blank" rel="noopener" aria-label="Apri profilo X (Twitter)">
+            <span class="dock-icon dock-icon--x" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="100%" height="100%"><rect width="24" height="24" rx="5" fill="#000"/><path d="M16.5 3h3l-5.5 6.3L21 21h-5l-4-5.2L7 21H4l6-6.8L3.5 3H9l3.6 4.8L16.5 3z" fill="#fff"/></svg>
+            </span>
+            <span class="dock-tooltip">X</span>
+          </a>
+        </li>
+        <li>
+          <a class="dock-item" href="https://discord.com/" target="_blank" rel="noopener" aria-label="Apri profilo Discord">
+            <span class="dock-icon dock-icon--discord" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M19.3 5.3a17 17 0 0 0-4.2-1.3l-.2.4a15 15 0 0 1 3.7 1.2 13 13 0 0 0-4-.6c-1 0-2 .2-3 .5-1-.3-2-.5-3-.5-1.4 0-2.7.2-4 .6 1.1-.5 2.4-.9 3.7-1.2l-.2-.4a17 17 0 0 0-4.2 1.3A18 18 0 0 0 2 16.2a17 17 0 0 0 5 2.6l1-1.5c-.9-.3-1.7-.7-2.4-1.3.2.1.4.2.5.3 3.7 1.7 7.7 1.7 11.3 0l.5-.3c-.7.5-1.5 1-2.4 1.3l1 1.5a17 17 0 0 0 5-2.6 18 18 0 0 0-2.2-10.9zM9 14c-1 0-1.7-.9-1.7-1.9S8.1 10.2 9 10.2s1.7.9 1.7 1.9S9.9 14 9 14zm6 0c-1 0-1.7-.9-1.7-1.9s.8-1.9 1.7-1.9 1.7.9 1.7 1.9-.7 1.9-1.7 1.9z" fill="#5865F2"/></svg>
+            </span>
+            <span class="dock-tooltip">Discord</span>
+          </a>
+        </li>
+        <li>
+          <button class="dock-item" id="openNotes" type="button" aria-label="Apri Note">
+            <span class="dock-icon dock-icon--notes" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="100%" height="100%"><rect x="3" y="3" width="18" height="18" rx="3" fill="#ffd60a"/><rect x="6" y="8" width="12" height="1.2" rx=".6" fill="#5b4500"/><rect x="6" y="11" width="12" height="1.2" rx=".6" fill="#5b4500"/><rect x="6" y="14" width="9" height="1.2" rx=".6" fill="#5b4500"/></svg>
+            </span>
+            <span class="dock-tooltip">Note</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- TEMPLATE FINESTRA PROGETTO -->
+  <template id="windowTemplate">
+    <div class="window" role="dialog" aria-modal="false" aria-labelledby="winTitle">
+      <div class="window-header" data-drag-handle>
+        <div class="window-controls">
+          <button class="ctrl ctrl--close" data-action="close" aria-label="Chiudi finestra"></button>
+          <button class="ctrl ctrl--min" data-action="minimize" aria-label="Riduci a icona" disabled></button>
+          <button class="ctrl ctrl--max" data-action="maximize" aria-label="Ingrandisci" disabled></button>
+        </div>
+        <h2 class="window-title" id="winTitle">Titolo progetto</h2>
+      </div>
+      <div class="window-body">
+        <h3 class="project-name">Nome progetto</h3>
+        <p class="project-desc">Descrizione del progetto.</p>
+        <div class="project-gallery">
+          <img alt="Screenshot progetto 1" loading="lazy" />
+          <img alt="Screenshot progetto 2" loading="lazy" />
+          <img alt="Screenshot progetto 3" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- APP NOTE -->
+  <div class="notes-app" id="notesApp" hidden aria-hidden="true">
+    <header class="notes-header" data-drag-handle>
+      <div class="window-controls">
+        <button class="ctrl ctrl--close" data-action="close-notes" aria-label="Chiudi Note"></button>
+        <button class="ctrl ctrl--min" aria-label="Riduci a icona" disabled></button>
+        <button class="ctrl ctrl--max" aria-label="Ingrandisci" disabled></button>
+      </div>
+      <h2 class="notes-title">Note</h2>
+      <span class="notes-subtitle" id="notesSubtitle">La mia storia</span>
+    </header>
+    <div class="notes-body">
+      <aside class="notes-sidebar" aria-label="Elenco note">
+        <ul>
+          <li class="note-item active" data-note="story">
+            <span class="note-item-title">La mia storia</span>
+            <span class="note-item-date">oggi</span>
+          </li>
+          <li class="note-item" data-note="exp">
+            <span class="note-item-title">Le mie esperienze e titoli</span>
+            <span class="note-item-date">oggi</span>
+          </li>
+        </ul>
+      </aside>
+      <section class="notes-content" aria-live="polite">
+        <article data-note-content="story">
+          <p>Ciao! Sono Emanuele Pio D'Amato e ho 14 anni.</p>
+          <p>Sono uno studente del liceo. Mi piacciono molto i motori (sono fan di F1) e suono da più di un anno la chitarra elettrica. La mia 
+            passione più grande però è la programmazione, in particolare mi occupo di siti web per piccole o grandi attvità. Sono sempre disposto
+            a collaborazioni o nuovi progretti. Scrivetemi a: emanuelepiodamato35@gmail.com
+          </p>
+        </article>
+        <article data-note-content="exp" hidden>
+          <h3>Esperienze</h3>
+          <ul>
+            <li><strong>2024 — presente</strong> Corsi AI di Antrophic e sviluppo siti web per attività locali</li>
+            <li><strong>2022 — 2024</strong> · Secondo corso di programmazione in Python presso Kodland</li>
+            <li><strong>2020 — 2022</strong> · Primo corso di programmazione in Python presso Kodland</li>
+          </ul>
+          <h3>Titoli di studio</h3>
+          <ul>
+            <li><strong>2025</strong> · Diploma Scuola Secondaria di I grado presso l'I.A.C. Dante Alighieri.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <script src="../MacOs Desktop/src/main.js></script>
+</body>
 </html>
