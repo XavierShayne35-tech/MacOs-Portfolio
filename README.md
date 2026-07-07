@@ -2,7 +2,7 @@
 
 Portfolio personale in stile **macOS Sonoma**, con desktop interattivo, finestre trascinabili, dock animato e sfondo astronomico NASA APOD (Astronomy Picture of the Day).
 
-🌐 **Demo online:** [xaviershayne35-tech.github.io/MacOS-Portfolio](https://xaviershayne35-tech.github.io/MacOS-Portfolio/)
+**Demo online:** [xaviershayne35-tech.github.io/MacOS-Portfolio](https://xaviershayne35-tech.github.io/MacOS-Portfolio/)
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Vite](https://img.shields.io/badge/vite-6.4-646CFF?logo=vite&logoColor=white)
@@ -11,31 +11,20 @@ Portfolio personale in stile **macOS Sonoma**, con desktop interattivo, finestre
 
 ---
 
-## ✨ Funzionalità
+## Funzionalità
 
-- 🖥️ **Desktop interattivo** in stile macOS con icone di progetto posizionate dinamicamente
-- 🪟 **Finestre trascinabili** (drag) con pulsanti di controllo (chiudi, minimizza, ingrandisci) e z-index automatico per il focus
-- 🪟 **App Note** in stile macOS Notes con sidebar e articoli (la mia storia, esperienze e titoli)
-- 🚀 **Dock animato** con link ai profili social (Instagram, X, Discord) e pulsante Note
-- 🌌 **Sfondo NASA APOD** che cambia ogni giorno (fallback grafico se l'API non è raggiungibile)
-- ⏰ **Orologio in tempo reale** nella menu bar
-- ⌨️ **Accessibilità**: `aria-label`, `role`, `tab navigation`, contrasto elevato
-- 📱 **Touch-friendly**: supporto per `touchstart`/`touchmove`/`touchend`
-- 🚀 **Zero framework runtime**: vanilla JS + CSS, build con Vite
+-  **Desktop interattivo** in stile macOS con icone di progetto posizionate dinamicamente
+-  **Finestre trascinabili** (drag) con pulsanti di controllo (chiudi, minimizza, ingrandisci) e z-index automatico per il focus
+-  **App Note** in stile macOS Notes con sidebar e articoli (la mia storia, esperienze e titoli)
+-  **Dock animato** con link ai profili social (Instagram, X, Discord) e pulsante Note
+-  **Sfondo NASA APOD** che cambia ogni giorno (fallback grafico se l'API non è raggiungibile)
+-  **Orologio in tempo reale** nella menu bar
+-  **Accessibilità**: `aria-label`, `role`, `tab navigation`, contrasto elevato
+-  **Touch-friendly**: supporto per `touchstart`/`touchmove`/`touchend`
+-  **Zero framework runtime**: vanilla JS + CSS, build con Vite
 
----
 
-## 🖼️ Screenshot
-
-*(Aggiungi qui uno screenshot del desktop — consigliato 1280×800)*
-
-```markdown
-![Desktop](docs/screenshot-desktop.png)
-```
-
----
-
-## 🚀 Quick start
+## Quick start
 
 ### Prerequisiti
 
@@ -67,7 +56,7 @@ npm run preview   # Anteprima del build di produzione
 
 ---
 
-## 🔑 NASA Astronomy Picture of the Day
+## NASA Astronomy Picture of the Day
 
 Il progetto usa l'API pubblica di NASA per impostare come sfondo l'immagine astronomica del giorno.
 
@@ -81,7 +70,7 @@ Il progetto usa l'API pubblica di NASA per impostare come sfondo l'immagine astr
    VITE_NASA_API_KEY=la_tua_chiave_qui
    ```
 
-> 💡 In alternativa puoi usare la chiave demo `DEMO_KEY` (rate-limit: 30 richieste/ora, 50/IP/giorno). Inseriscila in `.env` come `VITE_NASA_API_KEY=DEMO_KEY`.
+> In alternativa puoi usare la chiave demo `DEMO_KEY` (rate-limit: 30 richieste/ora, 50/IP/giorno). Inseriscila in `.env` come `VITE_NASA_API_KEY=DEMO_KEY`.
 
 ### Fallback
 
@@ -89,7 +78,7 @@ Se la chiave manca, è invalida o l'API è irraggiungibile, viene mostrato un gr
 
 ---
 
-## 📁 Struttura del progetto
+## Struttura del progetto
 
 ```
 MacOs-Portfolio/
@@ -129,7 +118,7 @@ Nessun framework (React, Vue, Svelte): tutto vanilla per minimizzare il bundle e
 
 ---
 
-## 📦 Bundle
+## Bundle
 
 Output di `npm run build` (Vite 6.4.3):
 
@@ -143,7 +132,7 @@ dist/assets/index-*.js          6.55 kB │ gzip:  2.72 kB
 
 ---
 
-## 🧩 Aggiungere un nuovo progetto
+## Aggiungere un nuovo progetto
 
 Per aggiungere una nuova icona sul desktop, modifica l'array `PROJECTS` in `src/main.js` (inizio del file):
 
@@ -171,7 +160,7 @@ mkdir -p src/assets/projects/mio-progetto
 
 ---
 
-## 🚢 Deploy
+## Deploy
 
 Il deploy è **automatico** ad ogni `git push` su `main`, grazie al workflow GitHub Actions in `.github/workflows/deploy.yml`.
 
@@ -196,7 +185,7 @@ Il deploy è **automatico** ad ogni `git push` su `main`, grazie al workflow Git
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Il sito restituisce 404
 
@@ -232,7 +221,7 @@ Vedi [LICENSE](LICENSE) per i dettagli.
 
 ---
 
-## 🙏 Crediti
+## Crediti
 
 - **Sfondi astronomici**: NASA [APOD API](https://apod.nasa.gov/apod/astropix.html) (pubblico dominio)
 - **Ispirazione UI**: macOS Sonoma ([Apple](https://www.apple.com/macos/sonoma/))
@@ -240,12 +229,12 @@ Vedi [LICENSE](LICENSE) per i dettagli.
 
 ---
 
-## 📫 Contatti
+## Contatti
 
-- 📧 Email: emanuelepiodamato35@gmail.com
-- 📷 Instagram: [@emanu_damato35](https://www.instagram.com/emanu_damato35/)
-- 🐦 X: [@PioAmato93520](https://x.com/PioAmato93520)
-- 🎮 Discord: [discord.com](https://discord.com/)
+-  Email: emanuelepiodamato35@gmail.com
+-  Instagram: [@emanu_damato35](https://www.instagram.com/emanu_damato35/)
+-  X: [@PioAmato93520](https://x.com/PioAmato93520)
+-  Discord: [discord.com](https://discord.com/)
 
 ---
 
