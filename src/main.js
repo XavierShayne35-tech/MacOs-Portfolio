@@ -56,7 +56,7 @@ import './style.css';
     },
   ];
 
-  const VITE_NASA_API_KEY = mport.meta.env.VITE_NASA_API_KEY;
+  const VITE_NASA_API_KEY = import.meta.env.VITE_NASA_API_KEY;
   const APOD_URL = `https://api.nasa.gov/planetary/apod?api_key=${VITE_NASA_API_KEY}`;
 
   const wallpaperEl = document.getElementById("wallpaper");
